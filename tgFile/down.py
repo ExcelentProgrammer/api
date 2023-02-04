@@ -1,3 +1,5 @@
+import asyncio
+
 from pyrogram import Client
 from environs import Env
 from sys import argv
@@ -14,8 +16,8 @@ chat_id = argv[2]
 message_id = argv[3]
 url = argv[4]
 
+
 # Create a new Client instance
-app = Client("bot", api_id=env.int("api_id"), api_hash=env.str("api_hash"), bot_token=token)
 
 
 def progress(down, size):
@@ -29,17 +31,18 @@ def progress(down, size):
 
 
 async def main(chat_id, message_id):
-    async with app:
+    async with Client("bot", api_id=env.int("api_id"), api_hash=env.str("api_hash"), bot_token=token) as app:
         # Send a message, Markdown is enabled by default
         message = await app.get_messages(chat_id=int(chat_id), message_ids=int(message_id))
         res = await app.download_media(message, file_name="../media/down/", progress=progress)
-        return res
+        return res.split("\\")[-1]
 
 
-app.run(main(chat_id, message_id))
+loop = asyncio.get_event_loop()
+res = loop.run_until_complete(main(chat_id, message_id))
 
 domain = env.str("domain")
-file_url = f"{domain}/{parse.quote(res)}"
+file_url = f"{domain}/media/down/{parse.quote(res)}"
 
 if match(r"^(.*)\?(.*)=(.*)$", url):
     get(f"{url}&status=finish&url={file_url}")
