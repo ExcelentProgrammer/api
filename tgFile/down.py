@@ -35,13 +35,15 @@ async def main(chat_id, message_id):
         # Send a message, Markdown is enabled by default
         message = await app.get_messages(chat_id=int(chat_id), message_ids=int(message_id))
         res = await app.download_media(message, file_name="../media/down/", progress=progress)
-        return res.split("\\")[-1]
+        return res.split("/")[-1]
 
 
 loop = asyncio.get_event_loop()
 res = loop.run_until_complete(main(chat_id, message_id))
 
 domain = env.str("domain")
+
+
 file_url = f"{domain}/media/down/{parse.quote(res)}"
 
 if match(r"^(.*)\?(.*)=(.*)$", url):
