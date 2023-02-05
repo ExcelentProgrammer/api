@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="da1fead2-fc4b-4b24-b48b-55b1d539cab2" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sendFile/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/media/sendFile/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sendFile/bot.session" beforeDir="false" afterPath="$PROJECT_DIR$/sendFile/bot.session" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sendFile/bot.session-journal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sendFile/send.py" beforeDir="false" afterPath="$PROJECT_DIR$/sendFile/send.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +28,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/python/api",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -62,7 +66,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675603821119</updated>
-      <workItem from="1675603822391" duration="6335000" />
+      <workItem from="1675603822391" duration="7333000" />
+      <workItem from="1675620546819" duration="115000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1675607730522</created>
@@ -78,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675608986095</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1675610873468</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675610873468</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
