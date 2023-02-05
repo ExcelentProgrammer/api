@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/telegram/sendMessage/', include("sendMessage.urls")),
     path('api/telegram/file/', include("tgFile.urls")),
+    path('api/telegram/file/', include("sendFile.urls")),
     path('api/me/', include("api.urls")),
     path('api/', include("djoser.urls")),
     path('api/', include("djoser.urls.authtoken")),
