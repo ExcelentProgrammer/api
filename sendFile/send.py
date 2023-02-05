@@ -26,36 +26,36 @@ callback_url = str(data['callback_url'])
 
 ex = url.split(".")[-1]
 
-file_name = f"media/sendFile/{time.time() * 1000}.{ex}"
-
-with open(file_name, "wb") as f:
-    print("Downloading %s" % url)
-    response = requests.get(url, stream=True)
-    total_length = response.headers.get('content-length')
-    d1 = ''
-    d2 = ''
-    if total_length is None:  # no content length header
-        f.write(response.content)
-    else:
-        dl = 0
-        total_length = int(total_length)
-        start_time = round(time.time())
-        for data in response.iter_content(chunk_size=4096):
-            f.write(data)
-            dl += len(data)
-            now_time = round(time.time())
-            if (now_time - 3) >= start_time:
-
-                start_time = now_time
-
-                d1 = round(dl / (1024 * 1024), 2)
-                d2 = round(total_length / (1024 * 1024), 2)
-
-                if match(r"^(.*)\?(.*)=(.*)$", callback_url):
-                    get(f"{callback_url}&down={d1}&size={d2}&status=downloading")
-                else:
-                    get(f"{callback_url}?down={d1}&size={d2}&status=downloading")
-        get(f"{callback_url}?down={d1}&size={d2}&status=downloaded")
+# file_name = f"media/sendFile/{time.time() * 1000}.{ex}"
+#
+# with open(file_name, "wb") as f:
+#     print("Downloading %s" % url)
+#     response = requests.get(url, stream=True)
+#     total_length = response.headers.get('content-length')
+#     d1 = ''
+#     d2 = ''
+#     if total_length is None:  # no content length header
+#         f.write(response.content)
+#     else:
+#         dl = 0
+#         total_length = int(total_length)
+#         start_time = round(time.time())
+#         for data in response.iter_content(chunk_size=4096):
+#             f.write(data)
+#             dl += len(data)
+#             now_time = round(time.time())
+#             if (now_time - 3) >= start_time:
+#
+#                 start_time = now_time
+#
+#                 d1 = round(dl / (1024 * 1024), 2)
+#                 d2 = round(total_length / (1024 * 1024), 2)
+#
+#                 if match(r"^(.*)\?(.*)=(.*)$", callback_url):
+#                     get(f"{callback_url}&down={d1}&size={d2}&status=downloading")
+#                 else:
+#                     get(f"{callback_url}?down={d1}&size={d2}&status=downloading")
+#         get(f"{callback_url}?down={d1}&size={d2}&status=downloaded")
 
 
 def progress(down, size):
@@ -74,13 +74,13 @@ async def main(file):
         # Send a message, Markdown is enabled by default
 
         if fileType == "video":
-            res = await app.send_video(chat_id=chat_id, caption=caption, video=file, progress=progress)
+            res = await app.send_video(chat_id=chat_id, caption=caption, video=file)
         elif fileType == "audio":
-            res = await app.send_audio(chat_id=chat_id, caption=caption, audio=file, progress=progress)
+            res = await app.send_audio(chat_id=chat_id, caption=caption, audio=file)
         elif fileType == "document":
-            res = await app.send_document(chat_id=chat_id, caption=caption, document=file, progress=progress)
+            res = await app.send_document(chat_id=chat_id, caption=caption, document=file)
         elif fileType == "photo":
-            res = await app.send_photo(chat_id=chat_id, caption=caption, photo=file, progress=progress)
+            res = await app.send_photo(chat_id=chat_id, caption=caption, photo=file)
         else:
             return []
         return res
@@ -88,7 +88,7 @@ async def main(file):
 
 loop = asyncio.get_event_loop()
 
-loop.run_until_complete(main(file=file_name))
+loop.run_until_complete(main(file=url))
 
 os.remove(file_name)
 
