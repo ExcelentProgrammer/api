@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1fead2-fc4b-4b24-b48b-55b1d539cab2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sendFile/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendFile/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendFile/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendFile/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendFile/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendFile/send.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendFile/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendFile/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendFile/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendFile/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+    <list default="true" id="da1fead2-fc4b-4b24-b48b-55b1d539cab2" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sendFile/send.py" beforeDir="false" afterPath="$PROJECT_DIR$/sendFile/send.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +62,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675603821119</updated>
-      <workItem from="1675603822391" duration="3831000" />
+      <workItem from="1675603822391" duration="5115000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1675607730522</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675607730523</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

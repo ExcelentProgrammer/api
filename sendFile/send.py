@@ -1,4 +1,6 @@
 import asyncio
+import os
+
 import requests
 from pyrogram import Client
 from environs import Env
@@ -30,7 +32,8 @@ with open(file_name, "wb") as f:
     print("Downloading %s" % url)
     response = requests.get(url, stream=True)
     total_length = response.headers.get('content-length')
-
+    d1 = ''
+    d2 = ''
     if total_length is None:  # no content length header
         f.write(response.content)
     else:
@@ -47,7 +50,7 @@ with open(file_name, "wb") as f:
 
                 d1 = round(dl / (1024 * 1024), 2)
                 d2 = round(total_length / (1024 * 1024), 2)
-                print(d1, d2)
+
                 if match(r"^(.*)\?(.*)=(.*)$", callback_url):
                     get(f"{callback_url}&down={d1}&size={d2}&status=downloading")
                 else:
@@ -59,7 +62,6 @@ def progress(down, size):
     down = round(down / (1024 * 1024), 2)
     size = round(size / (1024 * 1024), 2)
 
-    print(down, size)
 
     if match(r"^(.*)\?(.*)=(.*)$", url):
         get(f"{url}&send={down}&size={size}&status=progress")
@@ -86,9 +88,11 @@ async def main(file):
 
 loop = asyncio.get_event_loop()
 
-print(loop.run_until_complete(main(file=file_name)))
+loop.run_until_complete(main(file=file_name))
 
-# if match(r"^(.*)\?(.*)=(.*)$", url):
-#     get(f"{url}&status=finish&res={file_url}")
-# else:
-#     get(f"{url}?status=finish&res={file_url}")
+os.remove(file_name)
+
+if match(r"^(.*)\?(.*)=(.*)$", callback_url):
+    get(f"{url}&status=finish")
+else:
+    get(f"{url}?status=finish")
