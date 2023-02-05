@@ -61,7 +61,7 @@ with open(file_name, "wb") as f:
 def progress(down, size):
     down = round(down / (1024 * 1024), 2)
     size = round(size / (1024 * 1024), 2)
-
+    print(down,size)
 
     if match(r"^(.*)\?(.*)=(.*)$", url):
         get(f"{url}&send={down}&size={size}&status=progress")
