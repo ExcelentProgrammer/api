@@ -74,13 +74,13 @@ async def main(file):
         # Send a message, Markdown is enabled by default
 
         if fileType == "video":
-            res = await app.send_video(chat_id=chat_id, caption=caption, video=file)
+            res = await app.send_video(chat_id=chat_id, caption=caption, video=file,progress=progress)
         elif fileType == "audio":
-            res = await app.send_audio(chat_id=chat_id, caption=caption, audio=file)
+            res = await app.send_audio(chat_id=chat_id, caption=caption, audio=file,progress=progress)
         elif fileType == "document":
-            res = await app.send_document(chat_id=chat_id, caption=caption, document=file)
+            res = await app.send_document(chat_id=chat_id, caption=caption, document=file,progress=progress)
         elif fileType == "photo":
-            res = await app.send_photo(chat_id=chat_id, caption=caption, photo=file)
+            res = await app.send_photo(chat_id=chat_id, caption=caption, photo=file,progress=progress)
         else:
             return []
         return res
