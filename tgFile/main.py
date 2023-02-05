@@ -14,7 +14,7 @@ client = TelegramClient('bot', api_id, api_hash)
 client.start()
 exit()
 
-# result = client.send_file('@azamov_samandar', 'video.mp4')
+result = client.send_file('@azamov_samandar', 'video.mp4')
 
 msg = client.get_messages(1769851684,ids=17547)
 
