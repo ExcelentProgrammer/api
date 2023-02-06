@@ -5,6 +5,7 @@ import requests
 from pyrogram import Client
 from environs import Env
 from sys import argv
+import sys
 from os import remove
 from re import match
 from requests import get
@@ -50,7 +51,10 @@ with open(file_name, "wb") as f:
 
                 d1 = round(dl / (1024 * 1024), 2)
                 d2 = round(total_length / (1024 * 1024), 2)
-                print(f"downloading...\ntotal: {d2}\ndownloaded: {d1}")
+
+                done = int(50 * int(d1) / int(d2))
+                sys.stdout.write("\r[%s%s]" % ('=' * done, ' ' * (50 - done)))
+                sys.stdout.flush()
 
                 if match(r"^(.*)\?(.*)=(.*)$", callback_url):
                     get(f"{callback_url}&down={d1}&size={d2}&status=downloading")
@@ -62,7 +66,9 @@ with open(file_name, "wb") as f:
 def progress(down, size):
     down = round(down / (1024 * 1024), 2)
     size = round(size / (1024 * 1024), 2)
-    print(f"uploading...\ntotal: {size}\nuploaded: {down}")
+    done = int(50 * int(down) / int(size))
+    sys.stdout.write("\r[%s%s]" % ('=' * done, ' ' * (50 - done)))
+    sys.stdout.flush()
 
     if match(r"^(.*)\?(.*)=(.*)$", callback_url):
         get(f"{callback_url}&send={down}&size={size}&status=progress")

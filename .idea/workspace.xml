@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1fead2-fc4b-4b24-b48b-55b1d539cab2" name="Changes" comment="update">
+    <list default="true" id="da1fead2-fc4b-4b24-b48b-55b1d539cab2" name="Changes" comment="big file upload fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/sendFile/data.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sendFile/bot.session" beforeDir="false" afterPath="$PROJECT_DIR$/sendFile/bot.session" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sendFile/send.py" beforeDir="false" afterPath="$PROJECT_DIR$/sendFile/send.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgFile/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/tgFile/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675603821119</updated>
       <workItem from="1675603822391" duration="7333000" />
-      <workItem from="1675620546819" duration="4589000" />
+      <workItem from="1675620546819" duration="5822000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1675607730522</created>
@@ -112,11 +109,27 @@
       <option name="project" value="LOCAL" />
       <updated>1675621288603</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="upload fix">
+      <created>1675625216727</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675625216727</updated>
+    </task>
+    <task id="LOCAL-00008" summary="big file upload fix">
+      <created>1675625228091</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675625228091</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="upload fix" />
+    <MESSAGE value="big file upload fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="big file upload fix" />
   </component>
 </project>

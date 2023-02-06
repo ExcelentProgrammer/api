@@ -37,9 +37,8 @@ six==1.16.0
 social-auth-app-django==4.0.0
 social-auth-core==4.3.0
 sqlparse==0.4.3
+Telethon==1.27.0
 TgCrypto==1.2.5
 tzdata==2022.7
 uritemplate==4.1.1
 urllib3==1.26.14
-
-Telethon~=1.27.0
